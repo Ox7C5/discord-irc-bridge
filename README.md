@@ -9,3 +9,8 @@ In order to get this application to work, you need to create a Discord Bot.
 Follow the steps provided in [Discord Developer Portal](https://discord.com/developers/applications).
 
 ## IRC
+
+
+# Dependencies
+## IRC
+[Documentation](https://node-irc.readthedocs.io/en/latest/)
