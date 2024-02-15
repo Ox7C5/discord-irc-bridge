@@ -1,0 +1,23 @@
+{
+  "name": "discord-irc-bridge",
+  "version": "1.0.0",
+  "description": "A bridge between Discord and IRC",
+  "main": "main.js",
+  "scripts": {
+    "test": "node ./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ox7C5/discord-irc-bridge.git"
+  },
+  "keywords": [
+    "Discord",
+    "IRC"
+  ],
+  "author": "Ox7C5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ox7C5/discord-irc-bridge/issues"
+  },
+  "homepage": "https://github.com/Ox7C5/discord-irc-bridge#readme"
+}
