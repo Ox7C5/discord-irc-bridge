@@ -1,12 +1,12 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const irc = require('irc');
 
-var setchannel = "#trivia"; // `${setchannel}`
+// var setchannel = "#trivia"; // `${setchannel}`
 // could have just used ircConfig.channels instead of setchannel..
 const ircConfig = {
-    channels: ['#trivia'],
-    server: 'irc.freenode.net',
-    botName: 'vesey-bridge',
+    channels: ['#sirdal'],
+    server: 'irc.libera.chat',
+    botName: 'OxBridge',
 };
 
 const discordConfig = {
@@ -63,9 +63,10 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-    res.send('vesey-server');
+    res.send('discord-irc-bridge');
 });
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+    ircClient.say(`${setchannel}`, "Ox7C5: Discord bridge connected");
 });
