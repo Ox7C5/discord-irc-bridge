@@ -5,15 +5,6 @@ import * as helpers from 'helpers.js'
 const { Client, GatewayIntentBits } = require('discord.js');
 const irc = require('irc');
 
-const ircConfig = {
-    channels: ['#sirdal'],
-    server: 'irc.libera.chat',
-    botName: 'OxBridge',
-};
-
-const ircClient = new irc.Client(ircConfig.server, ircConfig.botName, {
-    channels: ircConfig.channels,
-});
 /*
 const discordConfig = {
     intents: [
@@ -27,6 +18,18 @@ const discordConfig = {
 const discordClient = new Client(discordConfig);
 discordClient.login('DISCORD BOT TOKEN');
 */
+
+const ircClient = new irc.Client(ircConfig.server, ircConfig.botName, {
+    userName: ircConfig.botName,
+    realName: 'Node IRC client',
+    port: 6697,
+    channels: ircConfig.channels,
+    secure: true,
+    sasl: false,
+    password: ircConfig.botPassword,
+    autoconnect: true
+});
+
 const express = require('express');
 const app = express();
 const PORT = 3000;
