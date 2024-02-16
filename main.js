@@ -1,6 +1,9 @@
-import * as ircEvents from 'ircEvents.js';
-import * as discordEvents from 'discordEvents.js';
-import * as helpers from 'helpers.js'
+//import * as ircEvents from 'ircEvents.js';
+//import * as discordEvents from 'discordEvents.js';
+//import * as helpers from 'helpers.js'
+
+const env = require('dotenv').config();
+console.log(process.env);
 
 const { Client, GatewayIntentBits } = require('discord.js');
 const irc = require('irc');

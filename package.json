@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Ox7C5/discord-irc-bridge#readme",
   "dependencies": {
     "discord.js": "^14.14.1",
+    "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "irc": "^0.5.2"
   }
