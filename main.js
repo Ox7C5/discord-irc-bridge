@@ -3,7 +3,6 @@
 //import * as helpers from 'helpers.js'
 
 const env = require('dotenv').config();
-console.log(process.env);
 
 const { Client, GatewayIntentBits } = require('discord.js');
 const irc = require('irc');
@@ -23,13 +22,13 @@ discordClient.login('DISCORD BOT TOKEN');
 */
 
 const ircClient = new irc.Client(ircConfig.server, ircConfig.botName, {
-    userName: ircConfig.botName,
+    userName: process.env.IRC_USERNAME,
     realName: 'Node IRC client',
     port: 6697,
-    channels: ircConfig.channels,
+    channels: ["#Sirdal"],
     secure: true,
     sasl: false,
-    password: ircConfig.botPassword,
+    password: process.env.IRC_PASSWORD,
     autoconnect: true
 });
 
